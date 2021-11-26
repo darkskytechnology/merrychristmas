@@ -11,3 +11,10 @@ To run trust.rs:
 
 To run security.go:
 ```go run security.go```
+```   .   *    .          .
+.     ^^^                     . 
+ .   ^^^^^    .    Merry Christmas .
+.   ^^^^^^^          .  from 
+   ^^^^^^^^^  . Dark Sky Technology! .
+. ^^^^^^^^^^^    .         .
+      ||	                 .```
