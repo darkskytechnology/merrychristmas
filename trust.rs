@@ -1,59 +1,51 @@
 // Merry Christmas from Dark Sky Technology!
 
-fn first_line(day_number: u32) {
-    let day_name = match day_number {
-        1 => "first",
-        2 => "second",
-        3 => "third",
-        4 => "fourth",
-        5 => "fifth",
-        6 => "sixth",
-        7 => "seventh",
-        8 => "eighth",
-        9 => "ninth",
-        10 => "tenth",
-        11 => "eleventh",
-        12 => "twelfth",
-        _ => "",
+// Open-source software is great because you can inspect the source code, but
+// sometimes that can be a little hard to interpret and verify the safety of...
+
+static MERRYCHRISTMAS:&'static str = "Dark Sky Technology verifies and fixes problems in bad, untrusted software";
+
+fn gift(christmas: usize) {
+    let merry = match christmas {
+        0 =>  format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(39).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(2).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(0).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(39).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(2).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap()),
+        1 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(70).unwrap(),MERRYCHRISTMAS.chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(56).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(0).unwrap(),MERRYCHRISTMAS.chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(20).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap()),
+        2 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(33).unwrap(),MERRYCHRISTMAS.chars().nth(2).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(11).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(12).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap()),
+        3 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.to_uppercase().chars().nth(33).unwrap(),MERRYCHRISTMAS.chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(56).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(11).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(42).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(0).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap()),
+        4 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.to_uppercase().chars().nth(33).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(20).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(17).unwrap(),MERRYCHRISTMAS.chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(15).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(0).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap()),
+        5 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(35).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(17).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(7).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap()),
+        6 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(20).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(70).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(70).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap()),
+        7 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.to_uppercase().chars().nth(26).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(0).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(3).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap()),
+        8 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.to_uppercase().chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(0).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(0).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(11).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap()),
+        9 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(2).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(0).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(39).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap()),
+        10 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.to_uppercase().chars().nth(26).unwrap(),MERRYCHRISTMAS.chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(20).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(39).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(39).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(2).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(39).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(39).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap()),
+        11 => format!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(70).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(20).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(0).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(56).unwrap(),MERRYCHRISTMAS.chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(0).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(56).unwrap(),MERRYCHRISTMAS.chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap()),
+        _ => format!(""),
     };
-
-    println!("\nOn the {} day of Christmas\nmy true love sent to me ",day_name);
-}
-
-fn gift(day_number: u32, prefix: &str) {
-    let gift = match day_number {
-        1 => "a Partridge in a Pear Tree",
-        2 => "Two Turtle Doves",
-        3 => "Three French Hens",
-        4 => "Four Calling Birds",
-        5 => "Five Golden Rings",
-        6 => "Six Geese a Laying",
-        7 => "Seven Swans a Swimming",
-        8 => "Eight Maids a Milking",
-        9 => "Nine Ladies Dancing",
-        10 => "Ten Lords a Leaping",
-        11 => "Eleven Pipers Piping",
-        12 => "12 Drummers Drumming",
-        _ => "",
-    };
-
-    println!("{}{}", prefix, gift);
+    println!("{}",merry);
 }
 
 fn main() {
+    let gifts = [format!("{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(33).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(37).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap()),
+                format!("{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(37).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(11).unwrap(),MERRYCHRISTMAS.chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(53).unwrap()),
+                format!("{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(53).unwrap()),
+                format!("{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(33).unwrap(),MERRYCHRISTMAS.chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(56).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap()),
+                format!("{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(33).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(33).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap()),
+                format!("{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(27).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(35).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap()),
+                format!("{}{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(27).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(20).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap()),
+                format!("{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(17).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap()),
+                format!("{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap()),
+                format!("{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap()),
+                format!("{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(20).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap()),
+                format!("{}{}{}{}{}{}{}",MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(70).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(33).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap())];
 
-    for day_number in 1..13 {
-        first_line(day_number);
-
-        for inner_day in (1..(day_number + 1)).rev() {
-            gift(
-                inner_day,
-                if inner_day == 1 && day_number != 1 {
-                    "and "
-                } else {
-                    ""
-                },
-            );
+    for (wrapping_paper,bow) in gifts.iter().enumerate() {
+        println!("{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}",MERRYCHRISTMAS.to_uppercase().chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),bow,MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(0).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(7).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(33).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_uppercase().chars().nth(11).unwrap(),MERRYCHRISTMAS.chars().nth(12).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(23).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(5).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(7).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.to_lowercase().chars().nth(9).unwrap(),MERRYCHRISTMAS.chars().nth(22).unwrap(),MERRYCHRISTMAS.chars().nth(56).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(15).unwrap(),MERRYCHRISTMAS.chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(20).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(27).unwrap(),MERRYCHRISTMAS.chars().nth(26).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(58).unwrap(),MERRYCHRISTMAS.chars().nth(14).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap(),MERRYCHRISTMAS.chars().nth(45).unwrap(),MERRYCHRISTMAS.chars().nth(10).unwrap());
+        for present in (0..(wrapping_paper)+1).rev(){
+            if present == 0 && wrapping_paper!=0 {
+               print!("{}{}{}{}",MERRYCHRISTMAS.chars().nth(1).unwrap(),MERRYCHRISTMAS.chars().nth(13).unwrap(),MERRYCHRISTMAS.chars().nth(53).unwrap(),MERRYCHRISTMAS.chars().nth(4).unwrap())
+             }
+            gift(present);
         }
+        println!();
     }
 }
