@@ -11,3 +11,5 @@ To run trust.rs:
 
 To run security.go:
 ```go run security.go```
+
+Spoiler: If you are too nervous to run them, you can see the output[here](DETAILS.md).
