@@ -30,7 +30,10 @@ Be careful about hidden code in open-source software comments!
 ```
 
 ### trust.rs
-This program prints the 12 days of Christmas song:
+Despite not being visible from the source code at all, this program 
+prints the entire 12 days of Christmas song:
+
+```
 On the first day of Christmas my true love sent to me
 a Partridge in a Pear Tree
 
@@ -132,9 +135,10 @@ Four Calling Birds
 Three French Hens
 Two Turtle Doves
 and a Partridge in a Pear Tree
+```
 
 ### security.go
-Prints a bit of ASCII art with a Christmas greeting:
+This program simply prints a bit of ASCII art with a Christmas greeting:
 
 ```
    .   *    .          .
