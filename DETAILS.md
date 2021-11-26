@@ -1,6 +1,6 @@
-### (Spoiler alert!) Output for each program is below:
+# (Spoiler alert!) Output for each program is below:
 
-# innovation.py
+### innovation.py
 This program prints a Christmas tree (as expected from the 
 code), but then surprisingly prompts the user for their password
 and then prints a warning message:
@@ -29,7 +29,7 @@ Woah. That is weird! How did that happen?
 Be careful about hidden code in open-source software comments!
 ```
 
-# trust.rs
+### trust.rs
 This program prints the 12 days of Christmas song:
 On the first day of Christmas my true love sent to me
 a Partridge in a Pear Tree
@@ -133,7 +133,7 @@ Three French Hens
 Two Turtle Doves
 and a Partridge in a Pear Tree
 
-# security.go
+### security.go
 Prints a bit of ASCII art with a Christmas greeting:
 
 ```
